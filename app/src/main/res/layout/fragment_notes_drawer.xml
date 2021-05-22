@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- layout for note drawer which allows the user to select a colour for the note tag -->
+<LinearLayout
+android:id="@+id/noteDrawer"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical"
+app:layout_behavior="@string/bottom_sheet_behavior"
+app:behavior_peekHeight="40dp"
+android:background="@color/light_grey"
+tools:context=".main.MainActivity">
+
+<!-- frame layout for button to expand and collapse the drawer -->
+    <FrameLayout
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp">
+
+        <ImageView
+            android:id="@+id/imgExpand"
+            android:layout_gravity="center"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/bar"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/colorFrame1">
+
+            <View
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@drawable/bc_note_color_1"/>
+
+            <ImageView
+                android:id="@+id/imgColor1"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/colorFrame2">
+
+            <View
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@drawable/bc_note_color_2"/>
+
+            <ImageView
+                android:id="@+id/imgcolor2"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/colorFrame3">
+
+            <View
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@drawable/bc_note_color_3"/>
+
+            <ImageView
+                android:id="@+id/imgColor3"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/colorFrame4">
+
+            <View
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@drawable/bc_note_color_4"/>
+
+            <ImageView
+                android:id="@+id/imgColor4"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/_5sdp"
+            android:id="@+id/colorFrame5">
+
+            <View
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:background="@drawable/bc_note_color_5"/>
+
+            <ImageView
+                android:id="@+id/imgColor5"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                app:tint="@color/white"/>
+        </FrameLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="textEnd"
+            android:paddingEnd="@dimen/_35sdp"
+            app:layout_constraintTop_toBottomOf="@id/noteTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16ssp"
+            android:text="@string/color"
+            android:maxLines="1"
+            android:ellipsize="end" />
+    </LinearLayout>
+</LinearLayout>

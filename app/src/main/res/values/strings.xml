@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">CrypToad</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Cryptoad</string>
+    <string name="nav_header_subtitle"></string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+    <string name="notes">My Notes</string>
+    <string name="search">Search</string>
+    <string name="note_title">Title</string>
+    <string name="note_overview">Overview</string>
+    <string name="note_entry">Note</string>
+    <string name="color">Tag Color</string>
+    <string name="crypto_name">Crypto Name</string>
+    <string name="crypto_desc">Crypto Description</string>
+    <string name="learn_more">Learn more</string>
+    <string name="learn">Learn crypto</string>
+    <string name="storage_permission">This app needs access to your devices storage</string>
+</resources>

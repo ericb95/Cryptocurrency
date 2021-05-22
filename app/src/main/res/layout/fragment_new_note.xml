@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Back button layout -->
+    <ImageView
+        android:id="@+id/backImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:src="@drawable/ic_back"
+        app:tint="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Save button layout -->
+    <ImageView
+        android:id="@+id/saveImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:tint="@color/black"
+        android:src="@drawable/ic_save"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/layout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/backImg">
+
+        <View
+            android:id="@+id/colorTag"
+            android:layout_width="@dimen/_7sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:background="@color/green" />
+
+    <!-- Note title entry layout -->
+    <EditText
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:background="@drawable/note_background"
+        android:hint="@string/note_title"
+        android:ellipsize="end"
+        android:inputType="text"
+        android:maxLines="1"
+        android:radius="@dimen/_5sdp"
+        android:textColor="@color/dark_grey"
+        android:textColorHint="@color/dark_grey"
+        android:textSize="@dimen/_16ssp" />
+    </LinearLayout>
+
+    <!-- date/time stamp -->
+    <TextView
+        android:id="@+id/dateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingStart="@dimen/_10sdp"
+        android:textColor="@color/grey"
+        android:textColorHint="@color/grey"
+        android:textSize="@dimen/_8ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout2" />
+
+    <!-- EditText user interface element for note overview -->
+        <EditText
+            android:id="@+id/noteDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:padding="@dimen/_10sdp"
+            android:background="@drawable/note_background"
+            android:ellipsize="end"
+            android:hint="@string/note_overview"
+            android:inputType="text"
+            android:maxLines="1"
+            android:textColor="@color/dark_grey"
+            android:textColorHint="@color/dark_grey"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateTime" />
+
+
+    <!-- EditText user interface element for note entry layout -->
+    <EditText
+        android:id="@+id/noteEntry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:background="@drawable/note_background"
+        android:hint="@string/note_entry"
+        android:inputType="textMultiLine"
+        android:textColor="@color/dark_grey"
+        android:textColorHint="@color/dark_grey"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/noteDescription" />
+
+    <!-- FrameLayout for color picking drawer. Image is where to tap to open the drawer -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgMore"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/bar" />
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

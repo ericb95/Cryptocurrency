@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    app:cardMaxElevation="6dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+
+    <!-- cardview layout for displaying crypto image, information, a short description. A button is in place for a user to learn more about cryptocurrency. The button does not go anywhere in this project and is for display. -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!--ImageView displaying cryptocurrency logo-->
+        <ImageView
+            android:id="@+id/cryptoImage"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            android:contentDescription="@string/app_name"
+            android:padding="5dp"
+            android:src="@drawable/cryptoad" />
+
+        <!--Textview displaying cryptocurrency name-->
+        <TextView
+            android:id="@+id/cryptoName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/cryptoImage"
+            android:text="@string/crypto_name"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!--TextView providing a brief description of the cryptocurrency -->
+        <TextView
+            android:id="@+id/cryptoDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cryptoName"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@id/cryptoImage"
+            android:drawablePadding="2dp"
+            android:text="@string/crypto_desc" />
+
+        <Button
+            android:id="@+id/button_send"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_below="@id/cryptoName"
+            android:layout_marginStart="133dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toEndOf="@id/cryptoImage"
+            android:drawablePadding="2dp"
+            android:text="@string/learn_more"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
